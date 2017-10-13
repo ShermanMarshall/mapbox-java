@@ -37,4 +37,18 @@ public final class Constants {
    * @since 1.0.0
    */
   public static final String MAPBOX_USER = "mapbox";
+
+  /**
+   * Use a precision of 6 decimal places when encoding or decoding a polyline.
+   *
+   * @since 2.1.0
+   */
+  public static final int PRECISION_6 = 6;
+
+  /**
+   * Use a precision of 5 decimal places when encoding or decoding a polyline.
+   *
+   * @since 1.0.0
+   */
+  public static final int PRECISION_5 = 5;
 }
