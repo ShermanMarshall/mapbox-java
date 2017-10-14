@@ -17,15 +17,11 @@ jobs:
     steps:
       - checkout
       - restore_cache:
-          key: jars-{{ checksum "build.gradle" }}-{{ checksum  "app/build.gradle" }}
-      - run:
-          name: Accept Android license
-          command: |
-           echo y | $ANDROID_HOME/tools/bin/sdkmanager "build-tools;26.0.1"
+          key: jars-{{ checksum "build.gradle" }}
       - save_cache:
           paths:
             - ~/.gradle
-          key: jars-{{ checksum "build.gradle" }}-{{ checksum  "app/build.gradle" }}
+          key: jars-{{ checksum "build.gradle" }}
       - run:
           name: Jacoco test report
           command: ./gradlew jacocoTestReport
