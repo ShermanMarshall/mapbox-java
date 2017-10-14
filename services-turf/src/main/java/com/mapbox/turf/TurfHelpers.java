@@ -37,6 +37,10 @@ public class TurfHelpers {
     FACTORS.put(TurfConstants.UNIT_KILOMETRES, 6373d);
   }
 
+  private TurfHelpers() {
+    // Private constructor preventing initialization of this class
+  }
+
   /**
    * Convert a distance measurement (assuming a spherical Earth) from a real-world unit into degrees
    * Valid units: miles, nauticalmiles, inches, yards, meters, metres, centimeters, kilometres,
