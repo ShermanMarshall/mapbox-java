@@ -118,7 +118,7 @@ public abstract class MapboxDirections extends MapboxService<DirectionsResponse>
   public Response<DirectionsResponse> executeCall() throws IOException {
     Response<DirectionsResponse> response = getCall().execute();
     if (response.body() == null || response.body().routes().isEmpty()) {
-      return response;
+      return Response.success(response.body(), response.headers());
     }
     List<DirectionsRoute> routes = response.body().routes();
     return Response.success(response.body().toBuilder().routes(
