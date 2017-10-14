@@ -252,10 +252,10 @@ public class TurfMeasurementTest extends TestUtils {
     double[] bbox = TurfMeasurement.bbox((Point) feature.geometry());
 
     assertEquals(4, bbox.length);
-    assertEquals(bbox[0], 102, DELTA);
-    assertEquals(bbox[1], 0.5, DELTA);
-    assertEquals(bbox[2], 102, DELTA);
-    assertEquals(bbox[3], 0.5, DELTA);
+    assertEquals(102, bbox[0], DELTA);
+    assertEquals(0.5, bbox[1], DELTA);
+    assertEquals(102, bbox[2], DELTA);
+    assertEquals(0.5, bbox[3], DELTA);
   }
 
   @Test
@@ -264,10 +264,10 @@ public class TurfMeasurementTest extends TestUtils {
     double[] bbox = TurfMeasurement.bbox(lineString);
 
     assertEquals(4, bbox.length);
-    assertEquals(bbox[0], 102, DELTA);
-    assertEquals(bbox[1], -10, DELTA);
-    assertEquals(bbox[2], 130, DELTA);
-    assertEquals(bbox[3], 4, DELTA);
+    assertEquals(102, bbox[0], DELTA);
+    assertEquals(-10, bbox[1], DELTA);
+    assertEquals(130, bbox[2], DELTA);
+    assertEquals(4, bbox[3], DELTA);
   }
 
   @Test
@@ -276,10 +276,10 @@ public class TurfMeasurementTest extends TestUtils {
     double[] bbox = TurfMeasurement.bbox((Polygon) feature.geometry());
 
     assertEquals(4, bbox.length);
-    assertEquals(bbox[0], 100, DELTA);
-    assertEquals(bbox[1], 0, DELTA);
-    assertEquals(bbox[2], 101, DELTA);
-    assertEquals(bbox[3], 1, DELTA);
+    assertEquals(100, bbox[0], DELTA);
+    assertEquals(0, bbox[1], DELTA);
+    assertEquals(101, bbox[2], DELTA);
+    assertEquals(1, bbox[3], DELTA);
   }
 
   @Test
@@ -289,10 +289,10 @@ public class TurfMeasurementTest extends TestUtils {
     double[] bbox = TurfMeasurement.bbox(multiLineString);
 
     assertEquals(4, bbox.length);
-    assertEquals(bbox[0], 100, DELTA);
-    assertEquals(bbox[1], 0, DELTA);
-    assertEquals(bbox[2], 103, DELTA);
-    assertEquals(bbox[3], 3, DELTA);
+    assertEquals(100, bbox[0], DELTA);
+    assertEquals(0, bbox[1], DELTA);
+    assertEquals(103, bbox[2], DELTA);
+    assertEquals(3, bbox[3], DELTA);
   }
 
   @Test
@@ -301,9 +301,9 @@ public class TurfMeasurementTest extends TestUtils {
     double[] bbox = TurfMeasurement.bbox(multiPolygon);
 
     assertEquals(4, bbox.length);
-    assertEquals(bbox[0], 100, DELTA);
-    assertEquals(bbox[1], 0, DELTA);
-    assertEquals(bbox[2], 103, DELTA);
-    assertEquals(bbox[3], 3, DELTA);
+    assertEquals(100, bbox[0], DELTA);
+    assertEquals(0, bbox[1], DELTA);
+    assertEquals(103, bbox[2], DELTA);
+    assertEquals(3, bbox[3], DELTA);
   }
 }
