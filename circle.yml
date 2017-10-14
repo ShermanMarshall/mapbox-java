@@ -31,13 +31,7 @@ jobs:
           command: ./gradlew jacocoTestReport
       - run:
           name: Sonarcloud upload
-          command: |
-            ./gradlew sonarqube \
-              -DskipTests=true \
-              -Dsonar.host.url=https://sonarcloud.io \
-              -Dsonar.organization=mapbox \
-              -Dsonar.login=$SONARCLOUD_KEY \
-              -Dsonar.test.failure.ignore=true
+          command: make sonarqube
       - run:
           name: Check Java code style
           command: make checkstyle
