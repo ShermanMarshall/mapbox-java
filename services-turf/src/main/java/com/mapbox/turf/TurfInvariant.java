@@ -13,7 +13,7 @@ import com.mapbox.services.utils.TextUtils;
  * @see <a href="http://turfjs.org/docs/">Turf documentation</a>
  * @since 1.2.0
  */
-public class TurfInvariant {
+public final class TurfInvariant {
 
   private TurfInvariant() {
     // Private constructor preventing initialization of this class

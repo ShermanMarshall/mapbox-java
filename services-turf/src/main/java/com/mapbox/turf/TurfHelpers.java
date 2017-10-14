@@ -16,7 +16,7 @@ import java.util.Map;
  * @see <a href="http://turfjs.org/docs/">Turfjs documentation</a>
  * @since 1.2.0
  */
-public class TurfHelpers {
+public final class TurfHelpers {
 
   private static final Map<String, Double> FACTORS;
 
