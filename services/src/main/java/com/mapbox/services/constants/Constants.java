@@ -1,9 +1,5 @@
 package com.mapbox.services.constants;
 
-import com.mapbox.services.BuildConfig;
-
-import java.util.Locale;
-
 /**
  * Includes common variables used throughout the Mapbox Service modules.
  *
