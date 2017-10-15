@@ -50,7 +50,7 @@ public class PolygonTest extends TestUtils {
         {100.0, 0.0}}
     };
     Polygon polygon = Polygon.fromLngLats(coordinates);
-    assertNull(polygon.inner());
+    assertEquals(0, polygon.inner().size());
     assertEquals(Point.fromLngLat(100.0, 0.0), polygon.coordinates().get(0).get(0));
   }
 
