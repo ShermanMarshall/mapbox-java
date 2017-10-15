@@ -9,7 +9,7 @@ import retrofit2.Response;
 
 /**
  * Shows how to make a request using the minimum required params.
- */x
+ */
 public class BasicDirections {
   public static void main(String[] args) {
 

@@ -80,7 +80,7 @@ public class MapboxDirectionsTest extends TestUtils {
   public ExpectedException thrown = ExpectedException.none();
 
   @Test
-  public void sanity() throws {
+  public void sanity() throws Exception {
     MapboxDirections mapboxDirections = MapboxDirections.builder()
       .accessToken(ACCESS_TOKEN)
       .origin(Point.fromLngLat(1.0, 1.0))
