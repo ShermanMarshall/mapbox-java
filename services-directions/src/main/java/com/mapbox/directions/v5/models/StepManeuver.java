@@ -35,7 +35,7 @@ public abstract class StepManeuver implements Serializable {
    * @return GeoJson Point representing this intersection location
    * @since 3.0.0
    */
-  @NonNull
+  @Nullable
   public Point location() {
     return Point.fromLngLat(rawLocation()[0], rawLocation()[1]);
   }
@@ -47,9 +47,9 @@ public abstract class StepManeuver implements Serializable {
    * @return GeoJson Point representing this intersection location
    * @since 3.0.0
    */
+  @Nullable
   @SerializedName("location")
-  @SuppressWarnings("mutable")
-  abstract double[] rawLocation();
+  abstract Double[] rawLocation();
 
   /**
    * Number between 0 and 360 indicating the clockwise angle from true north to the direction of
@@ -173,7 +173,7 @@ public abstract class StepManeuver implements Serializable {
      * @return this builder for chaining options together
      * @since 3.0.0
      */
-    public abstract Builder rawLocation(double[] rawLocation);
+    public abstract Builder rawLocation(@Nullable Double[] rawLocation);
 
     /**
      * Number between 0 and 360 indicating the clockwise angle from true north to the direction of
