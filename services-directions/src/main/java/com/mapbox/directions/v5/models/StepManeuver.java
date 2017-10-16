@@ -49,7 +49,7 @@ public abstract class StepManeuver implements Serializable {
    */
   @Nullable
   @SerializedName("location")
-  abstract Double[] rawLocation();
+  abstract double[] rawLocation();
 
   /**
    * Number between 0 and 360 indicating the clockwise angle from true north to the direction of
@@ -173,7 +173,7 @@ public abstract class StepManeuver implements Serializable {
      * @return this builder for chaining options together
      * @since 3.0.0
      */
-    public abstract Builder rawLocation(@Nullable Double[] rawLocation);
+    public abstract Builder rawLocation(@Nullable double[] rawLocation);
 
     /**
      * Number between 0 and 360 indicating the clockwise angle from true north to the direction of
