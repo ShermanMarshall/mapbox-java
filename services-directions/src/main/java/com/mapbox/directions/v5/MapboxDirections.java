@@ -153,7 +153,8 @@ public abstract class MapboxDirections extends MapboxService<DirectionsResponse>
               retrofit.responseBodyConverter(DirectionsError.class, new Annotation[0]);
 
           try {
-            onFailure(call, new Throwable(errorConverter.convert(response.errorBody()).message()));
+            callback.onFailure(
+              call, new Throwable(errorConverter.convert(response.errorBody()).message()));
           } catch (IOException e) {
             e.printStackTrace();
           }
@@ -161,10 +162,10 @@ public abstract class MapboxDirections extends MapboxService<DirectionsResponse>
           // If the response isn't successful we move invoke onFailure instead
           return;
         }
+        // TODO some of these checks shouldn't be needed anymore thanks to the isSuccessful check.
         if (response == null
           || response.body() == null
           || response.body().routes().isEmpty()) {
-          System.out.println(response.body().message());
           // If null just pass the original object back since there's nothing to modify.
           callback.onResponse(call, response);
         }
