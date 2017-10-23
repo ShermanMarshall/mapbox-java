@@ -7,16 +7,15 @@ import java.util.logging.Logger;
 
 /**
  * Represents a position defined by a longitude, latitude, and optionally, an altitude.
- *
  * @since 1.0.0
  */
 public class Position {
 
   private static final Logger logger = Logger.getLogger(Position.class.getSimpleName());
 
-  private final double longitude;
-  private final double latitude;
-  private final double altitude;
+  private double longitude;
+  private double latitude;
+  private double altitude;
 
   /**
    * Private constructor. It'll emit a warning if either latitude or longitude seem
