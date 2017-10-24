@@ -32,7 +32,7 @@ public class Position {
     this.latitude = latitude;
     this.altitude = altitude;
 
-    if (latitude != Double.POSITIVE_INFINITY && (latitude < -90 || latitude > 90)) {
+    if (latitude != Double.POSITIVE_INFINITY && (latitude < Constants.LATITUDE_MIN || latitude > Constants.LATITUDE_MAX)) {
       // Checks the latitude value is within range or provide a warning otherwise
       logger.warning(String.format(Constants.DEFAULT_LOCALE,
         "Latitude value seems to be out of range (found: %s, expected: [-90, 90]). "
@@ -40,7 +40,7 @@ public class Position {
         TextUtils.formatCoordinate(latitude)));
     }
 
-    if (longitude != Double.POSITIVE_INFINITY && (longitude < -180 || longitude > 180)) {
+    if (longitude != Double.POSITIVE_INFINITY && (longitude < Constants.LONGITUDE_MIN || longitude > Constants.LONGITUDE_MAX)) {
       // Checks the longitude value is within range or provide a warning otherwise
       logger.warning(String.format(Constants.DEFAULT_LOCALE,
         "Longitude value seems to be out of range (found: %s, expected: [-180, 180]). "
@@ -194,6 +194,9 @@ public class Position {
    */
   @Override
   public String toString() {
-    return "Position [longitude=" + longitude + ", latitude=" + latitude + ", altitude=" + altitude + "]";
+    return new StringBuilder("Position [longitude=").append(longitude)
+                .append(", latitude=").append(latitude)
+                .append(", altitude=").append(altitude).append("]")
+                .toString();
   }
 }
