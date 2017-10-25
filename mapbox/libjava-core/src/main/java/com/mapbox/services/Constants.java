@@ -20,10 +20,10 @@ public class Constants {
    */
   public static final String BASE_API_URL = "https://api.mapbox.com";
 
-  public static final int LATITUDE_MAX = 90;
-  public static final int LATITUDE_MIN = -90;
-  public static final int LONGITUDE_MAX = 180;
-  public static final int LONGITUDE_MIN = -180;
+  public static final double LATITUDE_MAX = 90.0;
+  public static final double LATITUDE_MIN = -90.0;
+  public static final double LONGITUDE_MAX = 180.0;
+  public static final double LONGITUDE_MIN = -180.0;
 
   /**
    * Constants for polyline encoding/decoding
